@@ -1,6 +1,6 @@
 /**
  * ************************** 
- * Purpose: Given a message ability to analyse Happy or Sad Mood
+ * Purpose: Given I am in Sad Mood message Should Return SAD
  *  
  * @author Piyush Shaw
  * @version 1.0
@@ -17,7 +17,7 @@ class MoodAnalyserTest {
 	 @Test
 	    public void givenMessage_Whensad_shouldReturnSad()  {
 	        MoodAnalyser moodAnalyser = new MoodAnalyser();
-	        String mood = moodAnalyser.analyseMood("This is sad message");
+	        String mood = moodAnalyser.analyseMood("I am in sad mood");
 
 	        Assertions.assertEquals("SAD", mood);
 	    }
