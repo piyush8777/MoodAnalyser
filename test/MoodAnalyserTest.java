@@ -1,6 +1,6 @@
 /**
  * ************************** 
- * Purpose: Given I am in Any Mood message Should Return HAPPY
+ * Purpose: Refactor the code to take the mood message in Constructor
  *  
  * @author Piyush Shaw
  * @version 1.0
@@ -17,8 +17,16 @@ class MoodAnalyserTest {
 	 @Test
 	    public void givenMessage_Whensad_shouldReturnSad()  {
 	        MoodAnalyser moodAnalyser = new MoodAnalyser();
+	        String mood = moodAnalyser.analyseMood("I am in sad Mood");
+
+	        Assertions.assertEquals("SAD", mood);
+	    }
+
+	    @Test
+	    public void givenMessage_Whensad_shouldReturnSad()  {
+	        MoodAnalyser moodAnalyser = new MoodAnalyser();
 	        String mood = moodAnalyser.analyseMood("I am in any Mood");
 
-	        Assertions.assertEquals("ANY", mood);
+	         Assertions.assertEquals("SAD", mood);
 	    }
 }
